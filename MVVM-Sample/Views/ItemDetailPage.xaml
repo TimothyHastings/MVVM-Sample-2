@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MVVMSample.ItemDetailPage" Title="{Binding Title}">
+	<StackLayout Spacing="20" Padding="15">
+        <!-- TH: Add fields  -->
+        <Entry Text="{Binding Item.Text}" FontSize="Small" />
+        <Label Text="Description" FontSize="Medium" />
+        <Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" />
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="20">
+            <Button Text="Update" Clicked="UpdateClicked" BorderColor="Black" />
+            <Button Text="Delete" Clicked="DeleteClicked" TextColor="Red" BorderColor="Black"/>
+        </StackLayout>
+	</StackLayout>
+</ContentPage>
